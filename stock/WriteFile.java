@@ -26,12 +26,13 @@ public class WriteFile implements InterfaceWriteFile {
     }
 
     public void fillDataOnFile(ArrayList mydata, String mypath, String myfilename) {
-        System.out.println("fillDataOnFile...");
+
         try {
-            String csvData = "Stock,Capital,Equity,Net Profit,EPS,NWPS\n";
-            String rawTxtData = mydata.toString();
-            String refineTxtData = rawTxtData.substring(1, rawTxtData.length() - 1);
-            csvData += refineTxtData;
+            String csvData = "Stock,Capital,Equity,Net Profit,EPS,NWPS";
+            /*
+             * for (int i = 0; i < mydata.size(); i++) { csvData += "\n" + mydata.get(i); }
+             */
+
             FileWriter myWriter = new FileWriter(mypath + myfilename);
             myWriter.write(csvData);
             myWriter.close();

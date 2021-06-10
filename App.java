@@ -1,5 +1,6 @@
 import stock.Stock;
 import stock.WriteFile;
+import java.util.ArrayList;
 
 final class App {
 
